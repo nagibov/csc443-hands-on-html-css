@@ -13,6 +13,12 @@
   --space: 1rem;
 }
 
+/* ===== Smooth in-page scrolling (offset for the sticky header) ===== */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
 /* ===== Reset ===== */
 *,
 *::before,
@@ -39,6 +45,9 @@ img {
 
 /* ===== Header & navigation ===== */
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -276,5 +285,22 @@ img {
 
   .section {
     padding: 4rem 2rem;
+  }
+}
+
+/* ===== Current page ===== */
+.nav-links a[aria-current="page"] {
+  color: var(--brand);
+  border-bottom-color: var(--brand);
+}
+
+/* ===== Respect reduced-motion preferences ===== */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    transition: none !important;
   }
 }
