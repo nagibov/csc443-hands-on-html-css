@@ -441,3 +441,55 @@ img {
   height: 0.8rem;
   accent-color: var(--brand);
 }
+
+/* ===== Grades table ===== */
+.table-wrap {
+  overflow-x: auto;
+}
+
+.grades {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.grades caption {
+  margin-bottom: 0.5rem;
+  text-align: left;
+  color: var(--muted);
+}
+
+.grades th,
+.grades td {
+  padding: 0.65rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap;
+}
+
+.grades thead th {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+
+.grades tbody tr:nth-child(even) {
+  background: var(--bg);
+}
+
+.grades tbody tr:hover {
+  background: #efe9fb;
+}
+
+/* ===== Status badges ===== */
+.badge {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.badge.ok   { background: #dcfce7; color: #166534; }
+.badge.warn { background: #fef3c7; color: #92400e; }
+.badge.late { background: #fee2e2; color: #991b1b; }
