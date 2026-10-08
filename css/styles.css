@@ -317,6 +317,39 @@ img {
 
 .sidebar {
   grid-area: side;
+  padding: 1.5rem 1rem;
+  background: var(--surface);
+  border-right: 1px solid var(--line);
+}
+
+.side-links {
+  position: sticky;
+  top: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.side-links a {
+  display: block;
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
+  color: var(--muted);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.side-links a:hover {
+  background: var(--bg);
+  color: var(--brand);
+}
+
+.side-links a[aria-current] {
+  background: var(--brand);
+  color: #fff;
 }
 
 .content {
