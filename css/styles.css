@@ -77,3 +77,53 @@ img {
   color: var(--brand);
   border-bottom-color: var(--brand);
 }
+
+/* ===== Hero ===== */
+.hero {
+  padding: clamp(3rem, 8vw, 6rem) 1.5rem;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(135deg, var(--brand), var(--accent));
+}
+
+.hero h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(2rem, 5vw + 1rem, 3.5rem);
+  line-height: 1.1;
+}
+
+.hero p {
+  max-width: 60ch;
+  margin: 0 auto 1.5rem;
+  font-size: 1.15rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space);
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  border: 2px solid #fff;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--brand-dark);
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgb(0 0 0 / 0.2);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #fff;
+}
