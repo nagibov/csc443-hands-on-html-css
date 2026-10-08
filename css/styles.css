@@ -517,3 +517,17 @@ img {
   font-weight: 700;
   color: var(--brand);
 }
+
+/* ===== Widget layout (named areas) ===== */
+.widgets {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "progress deadlines"
+    "grades   grades";
+  gap: 1.25rem;
+}
+
+.panel-progress  { grid-area: progress; }
+.panel-deadlines { grid-area: deadlines; }
+.panel-grades    { grid-area: grades; }
