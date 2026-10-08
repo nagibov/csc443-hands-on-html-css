@@ -251,3 +251,30 @@ img {
   color: #fff;
   cursor: pointer;
 }
+
+/* ===== Footer ===== */
+.site-footer {
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* ===== Larger screens (mobile-first) ===== */
+@media (min-width: 768px) {
+  .site-header {
+    padding: 1rem 2rem;
+  }
+
+  .nav-links {
+    gap: 2rem;
+  }
+
+  .section {
+    padding: 4rem 2rem;
+  }
+}
