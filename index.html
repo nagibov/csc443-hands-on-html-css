@@ -70,7 +70,33 @@
       </details>
     </section>
 
-    <!-- page sections go here -->
+    <section id="contact" class="section">
+      <h2>Contact the instructor</h2>
+      <form class="contact-form" action="#" method="post">
+        <div class="field">
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="email">LAU email</label>
+          <input id="email" name="email" type="email" required
+                 pattern=".+@lau\.edu(\.lb)?" placeholder="you@lau.edu">
+        </div>
+        <div class="field">
+          <label for="topic">Topic</label>
+          <select id="topic" name="topic">
+            <option>Lecture question</option>
+            <option>Project</option>
+            <option>Grades</option>
+          </select>
+        </div>
+        <div class="field field-full">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required minlength="10"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Send message</button>
+      </form>
+    </section>
   </main>
 
   <footer class="site-footer">
