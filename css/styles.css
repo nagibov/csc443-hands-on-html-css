@@ -127,3 +127,46 @@ img {
   background: transparent;
   color: #fff;
 }
+
+/* ===== Sections & cards ===== */
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.section h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  padding: 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgb(17 24 39 / 0.12);
+}
+
+.card h3 {
+  margin: 0 0 0.25rem;
+  color: var(--brand);
+}
+
+.card-meta {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
