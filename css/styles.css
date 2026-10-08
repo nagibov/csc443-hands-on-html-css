@@ -310,9 +310,10 @@ img {
    ========================================================= */
 .layout {
   display: grid;
-  grid-template-columns: 240px 1fr;
-  grid-template-areas: "side main";
-  min-height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "side"
+    "main";
 }
 
 .sidebar {
@@ -521,13 +522,40 @@ img {
 /* ===== Widget layout (named areas) ===== */
 .widgets {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-areas:
-    "progress deadlines"
-    "grades   grades";
+    "progress"
+    "deadlines"
+    "grades";
   gap: 1.25rem;
 }
 
 .panel-progress  { grid-area: progress; }
 .panel-deadlines { grid-area: deadlines; }
 .panel-grades    { grid-area: grades; }
+
+/* ===== Dashboard on small screens: links in a row ===== */
+.side-links {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* ===== Dashboard on wide screens ===== */
+@media (min-width: 900px) {
+  .layout {
+    grid-template-columns: 240px 1fr;
+    grid-template-areas: "side main";
+    min-height: 100vh;
+  }
+
+  .side-links {
+    flex-direction: column;
+  }
+
+  .widgets {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "progress deadlines"
+      "grades   grades";
+  }
+}
