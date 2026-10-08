@@ -575,3 +575,43 @@ img {
     --hover: #312e81;
   }
 }
+
+/* ===== Keyboard focus, everywhere ===== */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--brand);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ===== Cards respond to hover ===== */
+.stat,
+.panel {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stat:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgb(17 24 39 / 0.12);
+}
+
+/* ===== Printing a dashboard ===== */
+@media print {
+  .site-header,
+  .sidebar,
+  .site-footer {
+    display: none;
+  }
+
+  .layout,
+  .widgets {
+    display: block;
+  }
+
+  .panel {
+    box-shadow: none;
+    break-inside: avoid;
+    margin-bottom: 1rem;
+  }
+}
