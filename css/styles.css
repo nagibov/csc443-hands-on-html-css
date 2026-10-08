@@ -304,3 +304,32 @@ img {
     transition: none !important;
   }
 }
+
+/* =========================================================
+   DASHBOARD
+   ========================================================= */
+.layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  grid-template-areas: "side main";
+  min-height: 100vh;
+}
+
+.sidebar {
+  grid-area: side;
+}
+
+.content {
+  grid-area: main;
+  padding: 2rem;
+  min-width: 0;
+}
+
+.content h1 {
+  margin: 0;
+}
+
+.subtitle {
+  margin-top: 0.25rem;
+  color: var(--muted);
+}
